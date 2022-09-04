@@ -1237,7 +1237,6 @@ GameObject:
   m_Component:
   - component: {fileID: 145275638}
   - component: {fileID: 145275637}
-  - component: {fileID: 145275639}
   m_Layer: 5
   m_Name: A01
   m_TagString: SlotSprite
@@ -1312,18 +1311,6 @@ Transform:
   m_Father: {fileID: 1453372878}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &145275639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145275636}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acad93401f1ec554f9312a0b7c6e41be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &206884923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,7 +1321,6 @@ GameObject:
   m_Component:
   - component: {fileID: 206884925}
   - component: {fileID: 206884924}
-  - component: {fileID: 206884926}
   m_Layer: 5
   m_Name: A03
   m_TagString: SlotSprite
@@ -1409,18 +1395,6 @@ Transform:
   m_Father: {fileID: 1453372878}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &206884926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206884923}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f45bf3fdfbdae8b4ba93dfa0e7c4c51b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &224442875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,7 +1489,6 @@ GameObject:
   m_Component:
   - component: {fileID: 226732314}
   - component: {fileID: 226732313}
-  - component: {fileID: 226732315}
   m_Layer: 5
   m_Name: A04
   m_TagString: SlotSprite
@@ -1590,18 +1563,6 @@ Transform:
   m_Father: {fileID: 1453372878}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &226732315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226732312}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596dd298f347e934da844251e2f9f296, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &229271754
 GameObject:
   m_ObjectHideFlags: 0
@@ -2353,6 +2314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 411704186}
+  - component: {fileID: 411704187}
   m_Layer: 0
   m_Name: FindEmptySlotUI
   m_TagString: Untagged
@@ -2381,6 +2343,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &411704187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411704185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2cba9996676cc4783ea21a3cc4da1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &477768863
 GameObject:
   m_ObjectHideFlags: 0
@@ -2643,7 +2617,6 @@ GameObject:
   m_Component:
   - component: {fileID: 515454129}
   - component: {fileID: 515454130}
-  - component: {fileID: 515454131}
   m_Layer: 5
   m_Name: A02
   m_TagString: SlotSprite
@@ -2718,18 +2691,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &515454131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 515454128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2cba9996676cc4783ea21a3cc4da1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &517857343
 GameObject:
   m_ObjectHideFlags: 0
@@ -3337,7 +3298,6 @@ GameObject:
   - component: {fileID: 695247183}
   - component: {fileID: 695247182}
   - component: {fileID: 695247181}
-  - component: {fileID: 695247184}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3411,18 +3371,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &695247184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695247180}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 025aaa2b1e6c723478adbf6942a3fa72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &769985936
 GameObject:
   m_ObjectHideFlags: 0
@@ -6201,7 +6149,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1240119467}
   - component: {fileID: 1240119466}
-  - component: {fileID: 1240119468}
   m_Layer: 5
   m_Name: A05
   m_TagString: SlotSprite
@@ -6276,18 +6223,6 @@ Transform:
   m_Father: {fileID: 1453372878}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1240119468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240119465}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f084162533ba2f4e8a7937c93c60cb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1261433543
 GameObject:
   m_ObjectHideFlags: 0
