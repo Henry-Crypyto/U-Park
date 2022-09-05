@@ -1,7 +1,9 @@
-# Folders
+# No upload Folders
 .plastic
 Library
+Temp
 UserSettings
 
-# Files
-.vsconfig
+# no upload Files
+.collabignore
+ignore.conf
