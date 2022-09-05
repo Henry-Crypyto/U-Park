@@ -66,10 +66,10 @@
     <Compile Include="Assets\Scripts\Login\LoginSystem.cs" />
     <Compile Include="Assets\Scripts\FindSlot\DoNotDelete\EmptySlot_A03.cs" />
     <Compile Include="Assets\Scripts\FindSlot\DoNotDelete\EmptySlot_A05.cs" />
-    <Compile Include="Assets\Scripts\FindSlot\FindEmptySlot.cs" />
-    <Compile Include="Assets\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\MainMenu\ButtonGroup.cs" />
     <Compile Include="Assets\Scripts\MainMenu\ButtonChangeScene.cs" />
+    <Compile Include="Assets\Scripts\FindSlot\FindEmptySlot.cs" />
+    <Compile Include="Assets\ChangeScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

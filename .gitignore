@@ -1,5 +1,7 @@
-# 不上傳 Library 資料夾
+# Folders
+.plastic
 Library
-
-# 不上傳 UserSettings 資料夾
 UserSettings
+
+# Files
+.vsconfig
