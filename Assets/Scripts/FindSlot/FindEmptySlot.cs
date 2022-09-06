@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+
 public class  FindEmptySlot : MonoBehaviour
 {
     SpriteRenderer sprite;
     // Start is called before the first frame update
     public void Start()
     {
-      
         sprite = GetComponent<SpriteRenderer>();
         
         StartCoroutine(ChangeSlotColor("A01","1"));
@@ -34,6 +34,7 @@ public class  FindEmptySlot : MonoBehaviour
         // StartCoroutine(ChangeSlotColor("A21","1"));
         // StartCoroutine(ChangeSlotColor("A22","1"));
         // StartCoroutine(ChangeSlotColor("A23","1"));
+        
         // StartCoroutine(ChangeSlotColor("B01","1"));
         // StartCoroutine(ChangeSlotColor("B02","1"));
         // StartCoroutine(ChangeSlotColor("B03","1"));
@@ -56,11 +57,10 @@ public class  FindEmptySlot : MonoBehaviour
         // StartCoroutine(ChangeSlotColor("B20","1"));
         // StartCoroutine(ChangeSlotColor("B21","1"));
         // StartCoroutine(ChangeSlotColor("B22","1"));
-        
     }
 
     
-     IEnumerator ChangeSlotColor(string username,string occupied)
+     IEnumerator ChangeSlotColor(string username, string occupied)
     {
         WWWForm form = new WWWForm();
         form.AddField("loginUser", username);
@@ -75,33 +75,31 @@ public class  FindEmptySlot : MonoBehaviour
             }
             else
             {
-               string A=www.downloadHandler.text;
-               string C="比對成功啦";
+                string A=www.downloadHandler.text;
+                string C="比對成功啦";
             
-               if(string.Equals(A,C)){
-                 GameObject[] objects = GameObject.FindGameObjectsWithTag("SlotSprite");
-                 foreach (GameObject go in objects) {
-                     if(go.name==username){
-                        SpriteRenderer[] renderers = go.GetComponents<SpriteRenderer>();
-                        renderers[0].color=Color.red;
-                     }
-                  } 
-               }
-               else{
-                GameObject[] objects = GameObject.FindGameObjectsWithTag("SlotSprite");
-                 foreach (GameObject go in objects) {
-                     if(go.name==username){
-                        print(go.name);
-                        SpriteRenderer[] renderers = go.GetComponents<SpriteRenderer>();
-                        renderers[0].color=Color.green;
-                     }
-                  } 
-               }
+                if(string.Equals(A,C)){
+                    GameObject[] objects = GameObject.FindGameObjectsWithTag("SlotSprite");
+                    foreach (GameObject go in objects) {
+                        if(go.name==username){
+                            SpriteRenderer[] renderers = go.GetComponents<SpriteRenderer>();
+                            renderers[0].color=Color.red;
+                        }
+                    } 
+                }
+                else{
+                    GameObject[] objects = GameObject.FindGameObjectsWithTag("SlotSprite");
+                    foreach (GameObject go in objects) {
+                        if(go.name==username){
+                            
+                            SpriteRenderer[] renderers = go.GetComponents<SpriteRenderer>();
+                            renderers[0].color=Color.green;
+                        }
+                    } 
+                }
             }
+        }
     }
-  }
-
-  
 }
 
 

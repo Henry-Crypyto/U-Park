@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class Dijkstra : MonoBehaviour
+public class Dijkstra_S : MonoBehaviour
 {
     public static int cornerNumber=7;
     public static int CarNumber=45;
@@ -13,10 +13,11 @@ public class Dijkstra : MonoBehaviour
     private double[,] Cost=new double[cornerNumber+CarNumber+2,cornerNumber+CarNumber+2];
     public static int[,] Neighber=new int[cornerNumber+CarNumber+1,cornerNumber+CarNumber+1];//前面七個放corner 後面45放車位
     private double[] shortestPath=new double[cornerNumber+CarNumber+1];
-    public int[,] pi=new int[cornerNumber+CarNumber+1,cornerNumber+CarNumber+1];
+    public static int[,] pi=new int[cornerNumber+CarNumber+1,cornerNumber+CarNumber+1];
     public GameObject myself;
     void Start()
     {
+        
         for(int i=0;i<cornerNumber+CarNumber+1;i++)
         {
             for(int j=0;j<cornerNumber+CarNumber+1;j++)
@@ -37,6 +38,9 @@ public class Dijkstra : MonoBehaviour
         initial();
         initial_cost();
         dijkstra_FindSSSP();
+        dijkstra_FindSSSP();
+        // print("我進來了");
+        // getpi(33);
         // for(int i=0;i<53;i++)
         // {
         //     print("東門透過"+pi[0,i]+"到"+i);
@@ -168,9 +172,8 @@ public class Dijkstra : MonoBehaviour
     }
     public  void initial()
     {
-        Neighber[0,5]=1;//0到5號節點是鄰居
-        Neighber[0,7]=1;
-        //以上為東門附近的corner
+        Neighber[0,3]=1;//0到5號節點是鄰居
+        //以上為南門附近的corner
         Neighber[1,2]=1;
         Neighber[1,3]=1;
         //以上為1號corner(A1)的鄰居corner

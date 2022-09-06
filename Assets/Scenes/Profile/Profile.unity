@@ -1048,7 +1048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1661ffab4a673f4291a4b8ba21c9243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Username: {fileID: 768905477}
-  Password: {fileID: 588792706}
-  CarNum: {fileID: 287980905}
-  CreditCard: {fileID: 625081015}
+  UsernameContent: {fileID: 768905477}
+  PasswordContent: {fileID: 588792706}
+  CarNumContent: {fileID: 287980905}
+  CreditCardContent: {fileID: 625081015}

@@ -1,5 +1,9 @@
-# 不上傳 Library 資料夾
+# No upload Folders
+.plastic
 Library
-
-# 不上傳 UserSettings 資料夾
+Temp
 UserSettings
+
+# no upload Files
+.collabignore
+ignore.conf

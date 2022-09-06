@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{072FC7CC-1F79-C64B-5B89-AF1E7F02B15B}</ProjectGuid>
+    <ProjectGuid>{27A4CFEE-214A-50A2-0826-9E4BCE5354B1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,17 +56,19 @@
     <Analyzer Include="D:\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\Profile\Profile.cs" />
-    <Compile Include="Assets\Script\CameraControl.cs" />
-    <Compile Include="Assets\Script\FindCar\LineSetup.cs" />
-    <Compile Include="Assets\Script\FindSlot\EnterSlotNum.cs" />
-    <Compile Include="Assets\Script\FindCar\LineController.cs" />
-    <Compile Include="Assets\Script\FindCar\Dijkstra.cs" />
-    <Compile Include="Assets\Script\FindSlot\DoNotDelete\EmptySlot_A04.cs" />
-    <Compile Include="Assets\Script\Login\LoginSystem.cs" />
-    <Compile Include="Assets\Script\FindSlot\DoNotDelete\EmptySlot_A03.cs" />
-    <Compile Include="Assets\Script\FindSlot\DoNotDelete\EmptySlot_A05.cs" />
-    <Compile Include="Assets\Script\FindSlot\FindEmptySlot.cs" />
+    <Compile Include="Assets\Scripts\Profile\Profile.cs" />
+    <Compile Include="Assets\Scripts\CameraControl.cs" />
+    <Compile Include="Assets\Scripts\FindCar\LineSetup.cs" />
+    <Compile Include="Assets\Scripts\FindSlot\EnterSlotNum.cs" />
+    <Compile Include="Assets\Scripts\FindCar\LineController.cs" />
+    <Compile Include="Assets\Scripts\FindCar\Dijkstra.cs" />
+    <Compile Include="Assets\Scripts\FindSlot\DoNotDelete\EmptySlot_A04.cs" />
+    <Compile Include="Assets\Scripts\Login\LoginSystem.cs" />
+    <Compile Include="Assets\Scripts\FindSlot\DoNotDelete\EmptySlot_A03.cs" />
+    <Compile Include="Assets\Scripts\FindSlot\DoNotDelete\EmptySlot_A05.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\ButtonGroup.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\ButtonChangeScene.cs" />
+    <Compile Include="Assets\Scripts\FindSlot\FindEmptySlot.cs" />
     <Compile Include="Assets\ChangeScene.cs" />
   </ItemGroup>
   <ItemGroup>

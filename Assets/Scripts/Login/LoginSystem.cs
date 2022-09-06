@@ -22,13 +22,14 @@ public class LoginSystem : MonoBehaviour
     public Button Register;
     public GameObject LoginUI;
     public GameObject RegisterUI;
-    public static string UsernameTemp;
+    public static string Username;
+    public static string Password;
+    public static string CarNum;
+    public static string CreditCard;
     
     
     void Start()
     {
-        // RegisterUser("Henry","12345","12345","1234AB","1111222233334444");
-       
         LoginButton.onClick.AddListener(()=>{
             StartCoroutine(Login(UsernameLogin.text,PasswordLogin.text)) ;
         });
@@ -69,9 +70,8 @@ public class LoginSystem : MonoBehaviour
                 if(www.downloadHandler.text=="Login Succes"){
                    LoginStat.text="LoginSucess!!";
                    LoginStat.color=Color.green;
-                   UsernameTemp=username;
+                   StartCoroutine(GetUserProfile(username));
                    MoveToScenes(1);
-                   
                 //    ChangeScene.MoveToScene(1);
                 }
                 else{
@@ -122,30 +122,30 @@ public class LoginSystem : MonoBehaviour
         }
         
     }
+
+    public IEnumerator GetUserProfile(string username)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("loginUser", username);
+        
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/ParkingLot/Profile.php", form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+              string s = www.downloadHandler.text;
+              string[] subs = s.Split(' ');
+              Username=subs[0];
+              Password=subs[1];
+              CarNum=subs[2];
+              CreditCard=subs[3];
+            }
+        }
+    }
 }
 
-// public IEnumerator GetUser(string uri)
-//     {
-//         using (UnityWebRequest webRequest = UnityWebRequest.Get(uri))
-//         {
-//             // Request and wait for the desired page.
-//             yield return webRequest.SendWebRequest();
-
-//             string[] pages = uri.Split('/');
-//             int page = pages.Length - 1;
-
-//             switch (webRequest.result)
-//             {
-//                 case UnityWebRequest.Result.ConnectionError:
-//                 case UnityWebRequest.Result.DataProcessingError:
-//                     Debug.LogError(pages[page] + ": Error: " + webRequest.error);
-//                     break;
-//                 case UnityWebRequest.Result.ProtocolError:
-//                     Debug.LogError(pages[page] + ": HTTP Error: " + webRequest.error);
-//                     break;
-//                 case UnityWebRequest.Result.Success:
-//                     Debug.Log(pages[page] + ":\nReceived: " + webRequest.downloadHandler.text);
-//                     break;
-//             }
-//         }
-//     }
