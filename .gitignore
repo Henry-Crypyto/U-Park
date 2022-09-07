@@ -1,9 +1,16 @@
-# No upload Folders
+# No upload folders
 .plastic
 Library
+Logs
+obj
 Temp
 UserSettings
 
-# no upload Files
+# no upload files
 .collabignore
+.vsconfig
 ignore.conf
+ParkingApp(2).sln
+
+# no upload file type
+*.sln
