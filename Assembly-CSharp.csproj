@@ -57,18 +57,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Profile\Profile.cs" />
+    <Compile Include="Assets\Scripts\FindCar\Dijkstra_W.cs" />
     <Compile Include="Assets\Scripts\CameraControl.cs" />
-    <Compile Include="Assets\Scripts\FindCar\LineSetup.cs" />
+    <Compile Include="Assets\Scripts\FindCar\LineTesting.cs" />
     <Compile Include="Assets\Scripts\FindSlot\EnterSlotNum.cs" />
     <Compile Include="Assets\Scripts\FindCar\LineController.cs" />
+    <Compile Include="Assets\Scripts\Payment\Payment.cs" />
     <Compile Include="Assets\Scripts\FindCar\Dijkstra.cs" />
     <Compile Include="Assets\Scripts\FindSlot\DoNotDelete\EmptySlot_A04.cs" />
     <Compile Include="Assets\Scripts\Login\LoginSystem.cs" />
     <Compile Include="Assets\Scripts\FindSlot\DoNotDelete\EmptySlot_A03.cs" />
     <Compile Include="Assets\Scripts\FindSlot\DoNotDelete\EmptySlot_A05.cs" />
+    <Compile Include="Assets\Scripts\FindCar\Dijkstra_S.cs" />
     <Compile Include="Assets\Scripts\MainMenu\ButtonGroup.cs" />
+    <Compile Include="Assets\Scripts\FindCar\ShowPath.cs" />
     <Compile Include="Assets\Scripts\MainMenu\ButtonChangeScene.cs" />
     <Compile Include="Assets\Scripts\FindSlot\FindEmptySlot.cs" />
+    <Compile Include="Assets\Scripts\FindCar\GetSlotNum.cs" />
     <Compile Include="Assets\ChangeScene.cs" />
   </ItemGroup>
   <ItemGroup>
