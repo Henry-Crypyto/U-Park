@@ -5,7 +5,7 @@ public class LineController : MonoBehaviour
 {
     private LineRenderer lr;
     private Transform[] points;
-    Dijkstra pE;
+    Dijkstra_E pE;
     Dijkstra_S pS;
     Dijkstra_W pW;
     public GameObject a,b,c;
@@ -28,7 +28,7 @@ public class LineController : MonoBehaviour
         lr.positionCount = points.Length-1;
         this.points=points;
 
-        pE = a.GetComponent<Dijkstra>();
+        pE = a.GetComponent<Dijkstra_E>();
         pS = b.GetComponent<Dijkstra_S>();
         pW = c.GetComponent<Dijkstra_W>();
         lr.SetPosition(k,points[i].position);//把車位加進去
@@ -101,30 +101,25 @@ public class LineController : MonoBehaviour
     
 }
 
-// private void Update() {
-//         p = a.GetComponent<Dijkstra>();
-//         // print("我是線"+p.getpi(23));
-//         lr.SetPosition(k,points[i].position);
-//         while(0!=p.getpi(i)){
-//             ++k;
-//             lr.SetPosition(k,points[p.getpi(i)].position);
-//             print("我進來了"+p.getpi(i));
-//             i=p.getpi(i);            
-//         }
-//         lr.SetPosition(k+1,points[0].position);        
-//     }
+/*
+    private void Update() {
+        p = a.GetComponent<Dijkstra>();
+        // print("我是線"+p.getpi(23));
+        lr.SetPosition(k,points[i].position);
+        while(0!=p.getpi(i)){
+            ++k;
+            lr.SetPosition(k,points[p.getpi(i)].position);
+            print("我進來了"+p.getpi(i));
+            i=p.getpi(i);            
+        }
+        lr.SetPosition(k+1,points[0].position);        
+    }
+*/
 
-
-
-
-
-
-
-
-
-    //private void Update() {
-    //    for(int i=0;i<points.Length;i++){
-    //     lr.SetPosition(i,points[i].position);
-    //    }
-       
-    // }
+/*
+    private void Update() {
+       for(int i=0;i<points.Length;i++){
+        lr.SetPosition(i,points[i].position);
+       }
+    }
+*/
