@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class ShowPath : MonoBehaviour
 {
-    
     public Button ShowPathButton;
     public GameObject Line;
     void Start()
@@ -15,6 +14,4 @@ public class ShowPath : MonoBehaviour
             Line.SetActive(true);
         });
     }
-
-    
 }

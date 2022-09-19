@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class Dijkstra : MonoBehaviour
+public class Dijkstra_E : MonoBehaviour
 {
     public static int cornerNumber=7;
     public static int CarNumber=45;
