@@ -1,13 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
+using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LineSetup : MonoBehaviour
 {
+    public Button ArrowShow;
+    public GameObject Line;
     [SerializeField] private Transform[] points;
     [SerializeField] private LineController line;
-    
-    private void Start(){
-        line.SetUpLine(points);
+     void Start(){
+         ArrowShow.onClick.AddListener(() => {
+            line.SetUpLine(points);
+            // Line.SetActive(true);
+        });
     }
 }
