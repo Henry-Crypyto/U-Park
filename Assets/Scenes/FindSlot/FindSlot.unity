@@ -2597,7 +2597,7 @@ GameObject:
   - component: {fileID: 364382259}
   - component: {fileID: 364382258}
   m_Layer: 5
-  m_Name: Payment
+  m_Name: PaymentButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2623,7 +2623,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 270, y: 270}
+  m_SizeDelta: {x: 230, y: 230}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &364382258
 MonoBehaviour:
@@ -2637,7 +2637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c87a35e13ad7fa4eab759e532ed76d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 4
+  sceneIndex: 3
 --- !u!114 &364382259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4742,7 +4742,7 @@ GameObject:
   - component: {fileID: 934548065}
   - component: {fileID: 934548064}
   m_Layer: 5
-  m_Name: Profile
+  m_Name: ProfileButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4768,7 +4768,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 270, y: 270}
+  m_SizeDelta: {x: 230, y: 230}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &934548064
 MonoBehaviour:
@@ -4782,7 +4782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c87a35e13ad7fa4eab759e532ed76d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 5
+  sceneIndex: 4
 --- !u!114 &934548065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6086,7 +6086,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 270, y: 270}
+  m_SizeDelta: {x: 230, y: 230}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1145413694
 MonoBehaviour:
@@ -6100,7 +6100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c87a35e13ad7fa4eab759e532ed76d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 2
+  sceneIndex: 1
 --- !u!114 &1145413695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7885,7 +7885,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 270, y: 270}
+  m_SizeDelta: {x: 230, y: 230}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1438251916
 MonoBehaviour:
@@ -7899,7 +7899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c87a35e13ad7fa4eab759e532ed76d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 3
+  sceneIndex: 2
 --- !u!114 &1438251917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12484,7 +12484,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 40
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
