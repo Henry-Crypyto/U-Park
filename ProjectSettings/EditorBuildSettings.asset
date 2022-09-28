@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Login/Login.unity
     guid: f99c4347357a54d42b4d75281067d52f
   - enabled: 1
-    path: "Assets/Scenes/\u4E3B\u9801.unity"
-    guid: ba9610252a41efb4e9644f49d597c30a
-  - enabled: 1
     path: Assets/Scenes/FindSlot/FindSlot.unity
     guid: b3ac49ace47a6114ba50b10ebfa6f494
   - enabled: 1
