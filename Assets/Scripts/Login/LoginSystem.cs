@@ -57,7 +57,7 @@ public class LoginSystem : MonoBehaviour
         form.AddField("loginUser", username);
         form.AddField("loginPass", passwords);
         
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/ParkingLot/Login.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("https://breezeless-transmit.000webhostapp.com/phpfile/Login.php", form))
         {
             yield return www.SendWebRequest();
 
@@ -95,7 +95,7 @@ public class LoginSystem : MonoBehaviour
                RegisterStat.text="Password verify failed!!";
         }
         else{
-         using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/ParkingLot/RegisterUser.php", form))
+         using (UnityWebRequest www = UnityWebRequest.Post("https://breezeless-transmit.000webhostapp.com/phpfile/RegisterUser.php", form))
         {
             yield return www.SendWebRequest();
 
@@ -128,7 +128,7 @@ public class LoginSystem : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("loginUser", username);
         
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/ParkingLot/Profile.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("https://breezeless-transmit.000webhostapp.com/phpfile/Profile.php", form))
         {
             yield return www.SendWebRequest();
 
