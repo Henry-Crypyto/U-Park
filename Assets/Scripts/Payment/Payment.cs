@@ -23,7 +23,7 @@ public class Payment : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("SlotNum", SlotNum);
         
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/ParkingLot/Payment.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("https://breezeless-transmit.000webhostapp.com/phpfile/Payment.php", form))
         {
             yield return www.SendWebRequest();
 

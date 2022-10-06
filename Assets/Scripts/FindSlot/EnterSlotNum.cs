@@ -38,7 +38,7 @@ public class EnterSlotNum : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("SlotNum", SlotNumInput);
         
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/ParkingLot/EnterSlotNum.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("https://breezeless-transmit.000webhostapp.com/phpfile/EnterSlotNum.php", form))
         {
             yield return www.SendWebRequest();
             if (www.result != UnityWebRequest.Result.Success)
