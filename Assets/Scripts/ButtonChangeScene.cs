@@ -8,19 +8,19 @@ using UnityEngine.SceneManagement; //SceneManager
 
 public class ButtonChangeScene : MonoBehaviour 
 {
-    public int sceneIndex; //要載入的Scene
+    public string sceneName; //要載入的Scene
     
     void Start()
     {
 		//為按鈕加入On Click事件
         GetComponent<Button> ().onClick.AddListener(() => {
-            ClickEvent(sceneIndex);
+            ClickEvent(sceneName);
         });
     }
     
-    void ClickEvent(int sceneIndex)
+    void ClickEvent(string sceneName)
     {
 		//切換Scene
-        SceneManager.LoadScene (sceneIndex);
+        SceneManager.LoadScene (sceneName);
     }
 }
