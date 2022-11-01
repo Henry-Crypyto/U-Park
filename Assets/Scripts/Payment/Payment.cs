@@ -7,16 +7,18 @@ using System;
 using TMPro;
 public class Payment : MonoBehaviour
 {
-    public Text UsernameTitle;
-    public Text TotalParkingTimeTitles;
-    public Text CarNumberTitle;
-    public Text SlotNumberTitle;
-    public Text FeeTitle;
+
+    public TMPro.TMP_Text TotalParkingTimeTitles;
+    public TMPro.TMP_Text CarNumberTitle;
+    public TMPro.TMP_Text SlotNumberTitle;
+    public TMPro.TMP_Text FeeTitle;
+    public TMPro.TMP_Text ParkingStartTimeTitles;
     
 
     void Start()
     {
-        StartCoroutine(func_Payment(EnterSlotNum.SlotNum));
+        // StartCoroutine(func_Payment(EnterSlotNum.SlotNum));
+        StartCoroutine(func_Payment("A01"));
     }
     public IEnumerator func_Payment(string SlotNum)
     {
@@ -30,16 +32,11 @@ public class Payment : MonoBehaviour
             if (www.result != UnityWebRequest.Result.Success)
             {
                 Debug.Log(www.error);
-            }
+            } 
             else
             {
               string s = www.downloadHandler.text;
               string[] subs = s.Split(' ');
-              string[] YearAndMonthStart=subs[3].Split('-');
-              string[] TimeStart=subs[4].Split(':');
-              string[] YearAndMonthEnd=new string [5];
-              string[] TimeEnd=new string [5];
-             
             
               String str_start = subs[3]+" "+subs[4];
               String str_end =DateTime.Now.ToString();
@@ -48,20 +45,28 @@ public class Payment : MonoBehaviour
               TimeSpan ts = dt_end - dt_start;
 
               
-              int temp=(int)ts.TotalHours;
-              string totalHours = "Total Parked time: "+temp.ToString()+" hours";
+              int tempMinutes=(int)ts.Minutes;
+              int tempHours=(int)ts.TotalHours;
+              int tempSeconds=(int)ts.Seconds;
+              string totalHours =tempHours.ToString()+":"+tempMinutes.ToString()+":"+tempSeconds.ToString();
+
               int FeeHours=(int)ts.TotalHours;
               int FeeTemp=FeeHours*40;
               string FinalPrice=FeeTemp.ToString();
 
-
-              UsernameTitle.text=LoginSystem.Username;
+              
               TotalParkingTimeTitles.text=totalHours;
-              CarNumberTitle.text=LoginSystem.CarNum;
-              SlotNumberTitle.text="Slot number:"+EnterSlotNum.SlotNum;
-              FeeTitle.text="Fee:  "+FinalPrice+" dollars";
+              CarNumberTitle.text=Profile.CarNum;
+              SlotNumberTitle.text="1st Floor - "+EnterSlotNum.SlotNum;
+              FeeTitle.text="$"+FinalPrice;
+              ParkingStartTimeTitles.text="From "+str_start;
               
             }
         }
     }
-}
+}           //不要刪除下面這些
+            //   
+            //   TotalParkingTimeTitles.text=totalHours;
+            //   CarNumberTitle.text=LoginSystem.CarNum;
+            //   SlotNumberTitle.text="Slot number:"+EnterSlotNum.SlotNum;
+            //   FeeTitle.text="Fee:  "+FinalPrice+" dollars";

@@ -24,6 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Payment/Payment.unity
     guid: 6295feb61890e6848abcb8dcd20c928f
   - enabled: 1
-    path: Assets/Scenes/Profile/Profile.unity
+    path: Assets/Scenes/Profile/EditProfile.unity
     guid: 7ec5630a2bc9d3841b4150126996eaeb
+  - enabled: 1
+    path: Assets/Scenes/Profile/Profile.unity
+    guid: bfff4a961aab6a14a9c867dabbe2663b
+  - enabled: 1
+    path: Assets/Scenes/Profile/EditPassword.unity
+    guid: daa3db2a6e355194398ea78880020e8e
   m_configObjects: {}

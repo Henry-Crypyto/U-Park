@@ -9,10 +9,9 @@ public class EnterSlotNum : MonoBehaviour
     public Button EnterButton;
     public Button ConfirmButton;
     public Button CancelButton;
-    public Text ConfirmMessage;
-    public InputField SlotNumInputField;
+    public TMPro.TMP_Text ConfirmMessage;
+    public TMPro.TMP_InputField SlotNumInputField;
     public GameObject ConfirmWindow;
-
     public static string SlotNum;
     public Text RegisterStat;
 
@@ -35,9 +34,10 @@ public class EnterSlotNum : MonoBehaviour
 
     public IEnumerator func_EnterSlotNum(string SlotNumInput)
     {
+        string UpperSlotNumInput=SlotNumInput.ToUpper();
         WWWForm form = new WWWForm();
-        form.AddField("SlotNum", SlotNumInput);
-        
+        form.AddField("SlotNum", UpperSlotNumInput);
+       
         using (UnityWebRequest www = UnityWebRequest.Post("https://breezeless-transmit.000webhostapp.com/phpfile/EnterSlotNum.php", form))
         {
             yield return www.SendWebRequest();
@@ -47,10 +47,10 @@ public class EnterSlotNum : MonoBehaviour
             }
             else
             {
-                if(www.downloadHandler.text == "Register succesfully!!"){
-                    SlotNum = SlotNumInput;
-            }
-            RegisterStat.text = www.downloadHandler.text;
+              if(www.downloadHandler.text == "Register succesfully!!"){
+                    SlotNum = UpperSlotNumInput;
+              }
+              RegisterStat.text = www.downloadHandler.text;
             }
         }
     }

@@ -6,11 +6,20 @@ using UnityEngine.Networking;
 public class  FindEmptySlot : MonoBehaviour
 {
     SpriteRenderer sprite;
+    float time;
+    float timeDelay;
     // Start is called before the first frame update
     public void Start()
     {
+        time=0f;
+        timeDelay=3f;
         sprite = GetComponent<SpriteRenderer>();
         
+        
+    }
+    void Update() {
+      if(time>=timeDelay){
+        time=0f;
         StartCoroutine(ChangeSlotColor("A01","1"));
         StartCoroutine(ChangeSlotColor("A02","1"));
         StartCoroutine(ChangeSlotColor("A03","1"));
@@ -57,13 +66,14 @@ public class  FindEmptySlot : MonoBehaviour
         // StartCoroutine(ChangeSlotColor("B20","1"));
         // StartCoroutine(ChangeSlotColor("B21","1"));
         // StartCoroutine(ChangeSlotColor("B22","1"));
+        }
     }
 
     
-     IEnumerator ChangeSlotColor(string username, string occupied)
+     IEnumerator ChangeSlotColor(string slotnumber, string occupied)
     {
         WWWForm form = new WWWForm();
-        form.AddField("loginUser", username);
+        form.AddField("loginUser", slotnumber);
         form.AddField("slotOccupied", occupied);
         using (UnityWebRequest www = UnityWebRequest.Post("https://breezeless-transmit.000webhostapp.com/phpfile/Find_empty_slot.php", form))
         {
@@ -81,7 +91,7 @@ public class  FindEmptySlot : MonoBehaviour
                 if(string.Equals(A,C)){
                     GameObject[] objects = GameObject.FindGameObjectsWithTag("SlotSprite");
                     foreach (GameObject go in objects) {
-                        if(go.name==username){
+                        if(go.name==slotnumber){
                             SpriteRenderer[] renderers = go.GetComponents<SpriteRenderer>();
                             renderers[0].color=Color.red;
                         }
@@ -90,7 +100,7 @@ public class  FindEmptySlot : MonoBehaviour
                 else{
                     GameObject[] objects = GameObject.FindGameObjectsWithTag("SlotSprite");
                     foreach (GameObject go in objects) {
-                        if(go.name==username){
+                        if(go.name==slotnumber){
                             
                             SpriteRenderer[] renderers = go.GetComponents<SpriteRenderer>();
                             renderers[0].color=Color.green;
