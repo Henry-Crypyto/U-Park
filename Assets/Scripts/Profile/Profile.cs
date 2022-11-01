@@ -8,10 +8,12 @@ public class Profile : MonoBehaviour
 {
       
       public TMPro.TMP_Text UsernameContent;
-      public TMPro.TMP_Text PasswordContent;
+      public TMPro.TMP_InputField PasswordContent;
       public TMPro.TMP_Text CarNumContent;
       public TMPro.TMP_Text CreditCardContent;
       public TMPro.TMP_Text PhoneNumberCotent;
+      public Button EditButton;
+      public static string Username;
       public static string Password;
       public static string CarNum;
       public static string CreditCard;
@@ -24,9 +26,15 @@ public class Profile : MonoBehaviour
         // CarNumContent.text=LoginSystem.CarNum;
         // CreditCardContent.text=LoginSystem.CreditCard;
         // PhoneNumber.text=LoginSystem.PhoneNumber;
-       StartCoroutine(GetUserProfile(LoginSystem.Username));
+       StartCoroutine(GetUserProfile(LoginSystem.AccountName));
+        EditButton.onClick.AddListener(()=>{
+          MoveToScenes("EditProfile");
+        }); 
         
-        
+    }
+    public void MoveToScenes(string sceneName)
+    {
+        SceneManager.LoadScene (sceneName);
     }
     public IEnumerator GetUserProfile(string Account)
     {
@@ -46,12 +54,12 @@ public class Profile : MonoBehaviour
             {
               string s = www.downloadHandler.text;
               string[] subs = s.Split(' ');
-              
+              Username=subs[0];
               Password=subs[1];
               CarNum=subs[2];
               CreditCard=subs[3];
               PhoneNumber=subs[4];
-              Debug.Log(Password);
+              
 
               UsernameContent.text=subs[0];
               PasswordContent.text=subs[1];

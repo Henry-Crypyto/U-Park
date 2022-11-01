@@ -13,7 +13,7 @@ public class LoginSystem : MonoBehaviour
     public TMPro.TMP_InputField PasswordInputField;
     public Button LoginButton;
     public Button RegisterButton;
-    public static string Username;
+    public static string AccountName;
     
     
     void Start()
@@ -63,7 +63,7 @@ public class LoginSystem : MonoBehaviour
             else
             {
                 if(www.downloadHandler.text=="Login Succes"){
-                   Username=Account;
+                   AccountName=Account;
                    LoginStat.text="LoginSucess!!";
                    LoginStat.color=Color.green;
                 //    StartCoroutine(GetUserProfile(Account));
@@ -77,9 +77,8 @@ public class LoginSystem : MonoBehaviour
                 Debug.Log(www.downloadHandler.text);
             }
         }
-        }
-        
     }
+}
     // public IEnumerator GetUserProfile(string Account)
     // {
     //     WWWForm form = new WWWForm();

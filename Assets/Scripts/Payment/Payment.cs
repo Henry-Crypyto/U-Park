@@ -17,8 +17,8 @@ public class Payment : MonoBehaviour
 
     void Start()
     {
-        // StartCoroutine(func_Payment(EnterSlotNum.SlotNum));
-        StartCoroutine(func_Payment("A01"));
+         StartCoroutine(func_Payment(EnterSlotNum.SlotNum));
+        // StartCoroutine(func_Payment("A01"));
     }
     public IEnumerator func_Payment(string SlotNum)
     {

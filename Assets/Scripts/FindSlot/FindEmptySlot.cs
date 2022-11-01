@@ -18,6 +18,7 @@ public class  FindEmptySlot : MonoBehaviour
         
     }
     void Update() {
+        time=time+1f*Time.deltaTime;
       if(time>=timeDelay){
         time=0f;
         StartCoroutine(ChangeSlotColor("A01","1"));
