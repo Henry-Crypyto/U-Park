@@ -12,20 +12,27 @@ public class EnterSlotNum : MonoBehaviour
     public TMPro.TMP_Text ConfirmMessage;
     public TMPro.TMP_InputField SlotNumInputField;
     public GameObject ConfirmWindow;
-    public static string SlotNum;
-    public Text RegisterStat;
+    public static string SlotNum="";
+    public TMPro.TMP_Text RegisterStat;
 
     void Start()
     {
-        EnterButton.onClick.AddListener(() => {
+        EnterButton.onClick.AddListener(() => { 
+        if(SlotNumInputField.text==""){
+             RegisterStat.text="Please enter slot number first!!!";
+        }
+        else{
             ConfirmWindow.SetActive(true);
             ConfirmMessage.text = "Your slot number is " + SlotNumInputField.text + "\nIs it correct?";
+        }
         });
-
-        ConfirmButton.onClick.AddListener(() => {
-            ConfirmWindow.SetActive(false);
-            StartCoroutine(func_EnterSlotNum(SlotNumInputField.text));
+        
+            ConfirmButton.onClick.AddListener(() => {
+               ConfirmWindow.SetActive(false);
+               StartCoroutine(func_EnterSlotNum(SlotNumInputField.text));
         });
+        
+        
 
         CancelButton.onClick.AddListener(() => {
             ConfirmWindow.SetActive(false);
@@ -34,24 +41,24 @@ public class EnterSlotNum : MonoBehaviour
 
     public IEnumerator func_EnterSlotNum(string SlotNumInput)
     {
-        string UpperSlotNumInput=SlotNumInput.ToUpper();
-        WWWForm form = new WWWForm();
-        form.AddField("SlotNum", UpperSlotNumInput);
        
-        using (UnityWebRequest www = UnityWebRequest.Post("https://breezeless-transmit.000webhostapp.com/phpfile/EnterSlotNum.php", form))
-        {
-            yield return www.SendWebRequest();
-            if (www.result != UnityWebRequest.Result.Success)
-            {
-                Debug.Log(www.error);
-            }
-            else
-            {
-              if(www.downloadHandler.text == "Register succesfully!!"){
-                    SlotNum = UpperSlotNumInput;
+          string UpperSlotNumInput=SlotNumInput.ToUpper();
+          WWWForm form = new WWWForm();
+          form.AddField("SlotNum", UpperSlotNumInput);
+          using (UnityWebRequest www = UnityWebRequest.Post("https://u-parkprojectgraduation.com/phpfile/EnterSlotNum.php", form))
+          {
+              yield return www.SendWebRequest();
+              if (www.result != UnityWebRequest.Result.Success)
+              {
+                  Debug.Log(www.error);
               }
-              RegisterStat.text = www.downloadHandler.text;
-            }
+              else
+              {
+                if(www.downloadHandler.text == "Register succesfully!!"){
+                      SlotNum = UpperSlotNumInput;
+                }
+                RegisterStat.text = www.downloadHandler.text;
+              }
+          }
         }
-    }
 }

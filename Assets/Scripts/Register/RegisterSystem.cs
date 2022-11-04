@@ -30,17 +30,17 @@ public class RegisterSystem : MonoBehaviour
         SceneManager.LoadScene (sceneName);
     }
 
-    public IEnumerator RegisterUser(string username,string passwords,string verifypassword,string Account,string PhoneNumber)
+    public IEnumerator RegisterUser(string username,string passwords,string verifypassword,string Account,string PhoneNum)
     {
         WWWForm form = new WWWForm();
         form.AddField("loginUser", username);
         form.AddField("loginPass", passwords);
         form.AddField("loginAccount", Account);
-        form.AddField("loginPhoneNumber", PhoneNumber);
+        form.AddField("loginPhoneNum", PhoneNum);
         if(username==""){
             RegisterStat.text="Please enter username first!";
         }
-        else if(PhoneNumber==""){
+        else if(PhoneNum==""){
              RegisterStat.text="Please enter phonenumber first!";
         }
         else if(Account==""){
@@ -53,7 +53,7 @@ public class RegisterSystem : MonoBehaviour
                RegisterStat.text="Password verify failed!!";
         }
         else{
-         using (UnityWebRequest www = UnityWebRequest.Post("https://breezeless-transmit.000webhostapp.com/phpfile/RegisterUser.php", form))
+         using (UnityWebRequest www = UnityWebRequest.Post("https://u-parkprojectgraduation.com/phpfile/RegisterUser.php", form))
         {
             yield return www.SendWebRequest();
 

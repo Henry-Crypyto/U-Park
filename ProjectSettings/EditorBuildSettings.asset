@@ -29,7 +29,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Profile/Profile.unity
     guid: bfff4a961aab6a14a9c867dabbe2663b
-  - enabled: 1
-    path: Assets/Scenes/Profile/EditPassword.unity
-    guid: daa3db2a6e355194398ea78880020e8e
   m_configObjects: {}

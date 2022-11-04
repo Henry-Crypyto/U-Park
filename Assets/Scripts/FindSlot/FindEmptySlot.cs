@@ -76,7 +76,7 @@ public class  FindEmptySlot : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("loginUser", slotnumber);
         form.AddField("slotOccupied", occupied);
-        using (UnityWebRequest www = UnityWebRequest.Post("https://breezeless-transmit.000webhostapp.com/phpfile/Find_empty_slot.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("https://u-parkprojectgraduation.com/phpfile/FindEmptySlot.php", form))
         {
             yield return www.SendWebRequest();
 

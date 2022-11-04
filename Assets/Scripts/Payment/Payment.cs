@@ -13,19 +13,25 @@ public class Payment : MonoBehaviour
     public TMPro.TMP_Text SlotNumberTitle;
     public TMPro.TMP_Text FeeTitle;
     public TMPro.TMP_Text ParkingStartTimeTitles;
-    
+    public TMPro.TMP_Text RemindMessage;
 
     void Start()
     {
-         StartCoroutine(func_Payment(EnterSlotNum.SlotNum));
-        // StartCoroutine(func_Payment("A01"));
+        if(EnterSlotNum.SlotNum==""){
+             RemindMessage.text="Please enter slot number first!!!";
+        }
+        else{
+            StartCoroutine(func_Payment(EnterSlotNum.SlotNum));
+        }
+         
+         //StartCoroutine(func_Payment("A01"));
     }
     public IEnumerator func_Payment(string SlotNum)
     {
+       
         WWWForm form = new WWWForm();
         form.AddField("SlotNum", SlotNum);
-        
-        using (UnityWebRequest www = UnityWebRequest.Post("https://breezeless-transmit.000webhostapp.com/phpfile/Payment.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("https://u-parkprojectgraduation.com/phpfile/Payment.php", form))
         {
             yield return www.SendWebRequest();
 

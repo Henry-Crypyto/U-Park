@@ -22,7 +22,7 @@ public class GetSlotNum : MonoBehaviour
           SlotNumber=DictSlotNum[EnterSlotNum.SlotNum];
         }
         else{
-            Debug.Log("It's not in the map!");
+            Debug.Log("There's no such slot!!!");
         }
     }
 
