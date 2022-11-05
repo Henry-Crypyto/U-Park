@@ -43,12 +43,13 @@ public class LoginSystem : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("loginUser", Account);
         form.AddField("loginPass", password);
+
         if(Account==""){
-            LoginStat.text="Please Enter Account first!!!";
+            LoginStat.text="Account is required.";
             
         }
         else if(password==""){
-            LoginStat.text="Please Enter password first!!!";
+            LoginStat.text="Password is required.";
            
         }
         else{
@@ -64,13 +65,13 @@ public class LoginSystem : MonoBehaviour
             {
                 if(www.downloadHandler.text=="Login Succes"){
                    AccountName=Account;
-                   LoginStat.text="LoginSucess!!"+www.downloadHandler.text;
+                   LoginStat.text="Login Success."+www.downloadHandler.text;
                    LoginStat.color=Color.green;
                 //    StartCoroutine(GetUserProfile(Account));
                 //    MoveToScenes("FindSlot");
                 }
                 else{
-                   LoginStat.text="Account or password is wrong!!"+www.downloadHandler.text;
+                   LoginStat.text="Wrong account or password.\n" + www.downloadHandler.text;
                    LoginStat.color=Color.red;
                 }
                 
