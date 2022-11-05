@@ -21,6 +21,6 @@ public class ButtonChangeScene : MonoBehaviour
     void ClickEvent(string sceneName)
     {
 		//切換Scene
-        SceneManager.LoadScene (sceneName);
+        SceneManager.LoadScene(sceneName);
     }
 }

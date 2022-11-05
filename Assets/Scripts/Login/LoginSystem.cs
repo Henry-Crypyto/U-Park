@@ -4,37 +4,19 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-
-
 public class LoginSystem : MonoBehaviour
 {
     public TMPro.TMP_Text LoginStat;
     public TMPro.TMP_InputField AccountInputField;
     public TMPro.TMP_InputField PasswordInputField;
     public Button LoginButton;
-    public Button RegisterButton;
     public static string AccountName;
-    
     
     void Start()
     {
         LoginButton.onClick.AddListener(()=>{
             StartCoroutine(Login(AccountInputField.text,PasswordInputField.text)) ;
         });
-        
-        RegisterButton.onClick.AddListener(()=>{
-           MoveToScenes("Register");
-        });
-    }
-
-    // public void MoveToScenes(int sceneID)
-    // {
-    //     SceneManager.LoadScene(sceneID);
-    // }
-    public void MoveToScenes(string sceneName)
-    {
-		//切換Scene
-        SceneManager.LoadScene (sceneName);
     }
     
     public IEnumerator Login(string Account,string password)
@@ -64,15 +46,14 @@ public class LoginSystem : MonoBehaviour
             else
             {
                 if(www.downloadHandler.text=="Login Succes"){
-                   AccountName=Account;
-                   LoginStat.text="Login Success."+www.downloadHandler.text;
-                   LoginStat.color=Color.green;
-                //    StartCoroutine(GetUserProfile(Account));
-                //    MoveToScenes("FindSlot");
+                    AccountName=Account;
+                    LoginStat.text="Login Success." + www.downloadHandler.text;
+                    LoginStat.color=Color.green;
+                    SceneManager.LoadScene("FindSlot");
                 }
                 else{
-                   LoginStat.text="Wrong account or password.\n" + www.downloadHandler.text;
-                   LoginStat.color=Color.red;
+                    LoginStat.text="Wrong account or password.\n" + www.downloadHandler.text;
+                    LoginStat.color=Color.red;
                 }
                 
             }

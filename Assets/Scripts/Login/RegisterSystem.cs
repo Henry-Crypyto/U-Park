@@ -12,24 +12,14 @@ public class RegisterSystem : MonoBehaviour
     public TMPro.TMP_InputField PhoneNumberInputField;
     public TMPro.TMP_InputField PasswordInputField;
     public TMPro.TMP_InputField VerifyPasswordInputField;
-    public Button ReturnLoginButton;
     public Button SignUpButton;
     
     void Start()
     {
         SignUpButton.onClick.AddListener(()=>{
-            StartCoroutine(RegisterUser(UserNameInputField.text,PasswordInputField.text,VerifyPasswordInputField.text,AccountInputField.text,PhoneNumberInputField.text));
-        });
-        ReturnLoginButton.onClick.AddListener(()=>{
-             MoveToScenes("Login");
+            StartCoroutine(RegisterUser(UserNameInputField.text,PhoneNumberInputField.text,AccountInputField.text,PasswordInputField.text,VerifyPasswordInputField.text));
         });
     }
-
-    public void MoveToScenes(string sceneName)
-    {
-        SceneManager.LoadScene (sceneName);
-    }
-
     public IEnumerator RegisterUser(string username,string passwords,string verifypassword,string Account,string PhoneNum)
     {
         WWWForm form = new WWWForm();
@@ -66,7 +56,7 @@ public class RegisterSystem : MonoBehaviour
                 if(www.downloadHandler.text=="New record created successfully"){
                    RegisterStat.text="Register Sucess!";
                    RegisterStat.color=Color.green;
-                   MoveToScenes("Login");
+                   SceneManager.LoadScene("Login");
                 }
                 else{
                     RegisterStat.text="User has already taken!";
