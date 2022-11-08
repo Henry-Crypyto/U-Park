@@ -13,57 +13,54 @@ public class RegisterSystem : MonoBehaviour
     public TMPro.TMP_InputField PasswordInputField;
     public TMPro.TMP_InputField VerifyPasswordInputField;
     public Button SignUpButton;
-    
+
     void Start()
     {
-        SignUpButton.onClick.AddListener(()=>{
-            StartCoroutine(RegisterUser(UserNameInputField.text,PhoneNumberInputField.text,AccountInputField.text,PasswordInputField.text,VerifyPasswordInputField.text));
+        SignUpButton.onClick.AddListener(() => {
+            StartCoroutine(RegisterUser(UserNameInputField.text, PhoneNumberInputField.text, AccountInputField.text, PasswordInputField.text, VerifyPasswordInputField.text));
         });
     }
-    public IEnumerator RegisterUser(string username,string passwords,string verifypassword,string Account,string PhoneNum)
+    public IEnumerator RegisterUser(string username, string passwords, string verifypassword, string Account, string PhoneNum)
     {
         WWWForm form = new WWWForm();
         form.AddField("loginUser", username);
         form.AddField("loginPass", passwords);
         form.AddField("loginAccount", Account);
         form.AddField("loginPhoneNum", PhoneNum);
-        if(username==""){
-            RegisterStat.text="Please enter username first!";
+        if (username == "") {
+            RegisterStat.text = "Please enter username first!";
         }
-        else if(PhoneNum==""){
-             RegisterStat.text="Please enter phonenumber first!";
+        else if (PhoneNum == "") {
+            RegisterStat.text = "Please enter phonenumber first!";
         }
-        else if(Account==""){
-             RegisterStat.text="Please enter account first!";
+        else if (Account == "") {
+            RegisterStat.text = "Please enter account first!";
         }
-        else if(passwords==""){
-             RegisterStat.text="Please enter password first!";
+        else if (passwords == "") {
+            RegisterStat.text = "Please enter password first!";
         }
-        else if(passwords!=verifypassword){
-               RegisterStat.text="Password verify failed!!";
+        else if (passwords != verifypassword) {
+            RegisterStat.text = "Password verify failed!!";
         }
-        else{
-         using (UnityWebRequest www = UnityWebRequest.Post("https://u-parkprojectgraduation.com/phpfile/RegisterUser.php", form))
-        {
-            yield return www.SendWebRequest();
+        else {
+            using (UnityWebRequest www = UnityWebRequest.Post("https://u-parkprojectgraduation.com/phpfile/RegisterUser.php", form)) {
+                yield return www.SendWebRequest();
 
-            if (www.result != UnityWebRequest.Result.Success)
-            {
-                Debug.Log(www.error);
-            }
-            else
-            {
-                if(www.downloadHandler.text=="New record created successfully"){
-                   RegisterStat.text="Register Sucess!";
-                   RegisterStat.color=Color.green;
-                   SceneManager.LoadScene("Login");
+                if (www.result != UnityWebRequest.Result.Success) {
+                    Debug.Log(www.error);
                 }
-                else{
-                    RegisterStat.text="User has already taken!";
+                else {
+                    if (www.downloadHandler.text == "New record created successfully") {
+                        RegisterStat.text = "Register Sucess!";
+                        RegisterStat.color = Color.green;
+                        SceneManager.LoadScene("Login");
+                    }
+                    else {
+                        RegisterStat.text = "User has already taken!";
+                    }
+                    Debug.Log(www.downloadHandler.text);
                 }
-                Debug.Log(www.downloadHandler.text);
             }
-         }
-      }
+        }
     }
-  }
+}

@@ -8,111 +8,95 @@ public class LineController : MonoBehaviour
     Dijkstra_E pE;
     Dijkstra_S pS;
     Dijkstra_W pW;
-    public GameObject a,b,c;
-    int selectdoor=ChooseDoor.DoorNumber; //0是東門
+    public GameObject a, b, c;
+    int selectdoor = ChooseDoor.DoorNumber; //0是東門
     int nowpoint;
-    
+
     int[] q = new int[5];
 
-    private void Awake(){
+    private void Awake()
+    {
         lr = GetComponent<LineRenderer>();
     }
-    void Update(){
-        selectdoor=ChooseDoor.DoorNumber;
+    void Update()
+    {
+        selectdoor = ChooseDoor.DoorNumber;
     }
     public void SetUpLine(Transform[] points)
     {
-        int k=0;
+        int k = 0;
         // int i=18;
-        int i=GetSlotNum.SlotNumber;
-        if(selectdoor!=0&&selectdoor!=98&&
-        selectdoor!=99)
-        {
+        int i = GetSlotNum.SlotNumber;
+        if (selectdoor != 0 && selectdoor != 98 &&
+        selectdoor != 99) {
             return;
         }
-        lr.positionCount = points.Length-1;
-        this.points=points;
-        
+        lr.positionCount = points.Length - 1;
+        this.points = points;
+
         pE = a.GetComponent<Dijkstra_E>();
         pS = b.GetComponent<Dijkstra_S>();
         pW = c.GetComponent<Dijkstra_W>();
 
-        for(int u=0;u<99;u++)//清除上一條線
+        for (int u = 0; u < 99; u++)//清除上一條線
         {
-            if(selectdoor==0)
-            {
-                lr.SetPosition(u,points[0].position);
+            if (selectdoor == 0) {
+                lr.SetPosition(u, points[0].position);
             }
-            else if(selectdoor==98)
-            {
-                lr.SetPosition(u,points[98].position);
+            else if (selectdoor == 98) {
+                lr.SetPosition(u, points[98].position);
             }
-            else
-            {
-                lr.SetPosition(u,points[99].position);
-            } 
+            else {
+                lr.SetPosition(u, points[99].position);
+            }
         }
 
-        lr.SetPosition(k,points[i].position);//把車位加進去
+        lr.SetPosition(k, points[i].position);//把車位加進去
         k++;
-        lr.SetPosition(k,points[i+45].position);//車位前面那個點
-        if(selectdoor==0)
-        {
-            nowpoint=pE.getpi(i);
+        lr.SetPosition(k, points[i + 45].position);//車位前面那個點
+        if (selectdoor == 0) {
+            nowpoint = pE.getpi(i);
         }
-        else if(selectdoor==98)
-        {
-            nowpoint=pS.getpi(i);
+        else if (selectdoor == 98) {
+            nowpoint = pS.getpi(i);
         }
-        else
-        {
-            nowpoint=pW.getpi(i);
+        else {
+            nowpoint = pW.getpi(i);
         }
-        
-        while(0!=nowpoint)
-        {
+
+        while (0 != nowpoint) {
             ++k;
-            lr.SetPosition(k,points[nowpoint].position);
-            if(selectdoor==0)
-            {
-                nowpoint=pE.getpi(nowpoint);
+            lr.SetPosition(k, points[nowpoint].position);
+            if (selectdoor == 0) {
+                nowpoint = pE.getpi(nowpoint);
             }
-            else if(selectdoor==98)
-            {
-                nowpoint=pS.getpi(nowpoint);
+            else if (selectdoor == 98) {
+                nowpoint = pS.getpi(nowpoint);
             }
-            else
-            {
-                nowpoint=pW.getpi(nowpoint);
-            }           
+            else {
+                nowpoint = pW.getpi(nowpoint);
+            }
         };
-        k=k+1;
-        if(selectdoor==0)
-        {
-            lr.SetPosition(k,points[0].position);
+        k = k + 1;
+        if (selectdoor == 0) {
+            lr.SetPosition(k, points[0].position);
         }
-        else if(selectdoor==98)
-        {
-            lr.SetPosition(k,points[98].position);
+        else if (selectdoor == 98) {
+            lr.SetPosition(k, points[98].position);
         }
-        else
-        {
-            lr.SetPosition(k,points[99].position);
-        }   
-        for(int u=0;u<99-k;u++)
-        {
-            if(selectdoor==0)
-            {
-                lr.SetPosition(k+u,points[0].position);
+        else {
+            lr.SetPosition(k, points[99].position);
+        }
+        for (int u = 0; u < 99 - k; u++) {
+            if (selectdoor == 0) {
+                lr.SetPosition(k + u, points[0].position);
             }
-            else if(selectdoor==98)
-            {
-                lr.SetPosition(k+u,points[98].position);
+            else if (selectdoor == 98) {
+                lr.SetPosition(k + u, points[98].position);
             }
-            else
-            {
-                lr.SetPosition(k+u,points[99].position);
-            } 
+            else {
+                lr.SetPosition(k + u, points[99].position);
+            }
         }
     }
 }

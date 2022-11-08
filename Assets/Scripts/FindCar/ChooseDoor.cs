@@ -11,16 +11,16 @@ public class ChooseDoor : MonoBehaviour
     public Button ArrowShow;
     public void ChooseDoorNumber()
     {
-        if(myDrop.value==2){
-            DoorNumber=0;
+        if (myDrop.value == 2) {
+            DoorNumber = 0;
         }
-        else if (myDrop.value==3){
-            DoorNumber=98;
+        else if (myDrop.value == 3) {
+            DoorNumber = 98;
         }
-        else if (myDrop.value==4){
-            DoorNumber=99;
-            }
-        else if(myDrop.value==1){
+        else if (myDrop.value == 4) {
+            DoorNumber = 99;
+        }
+        else if (myDrop.value == 1) {
             print("我好帥1");
         }
         else {
