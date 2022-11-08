@@ -30,17 +30,12 @@ public class Profile : MonoBehaviour
 
         StartCoroutine(GetUserProfile(LoginSystem.AccountName));
         EditButton.onClick.AddListener(() => {
-            MoveToScenes("EditProfile");
+            SceneManager.LoadScene("EditProfile");
         });
-
     }
-    public void MoveToScenes(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-    }
+    
     public IEnumerator GetUserProfile(string Account)
     {
-
         WWWForm form = new WWWForm();
         form.AddField("loginUser", Account);
 
