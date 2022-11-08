@@ -8,29 +8,35 @@ public class EditPassword : MonoBehaviour
 {
     public TMPro.TMP_InputField OldPasswordInputField;
     public TMPro.TMP_InputField NewPasswordInputField;
-    public TMPro.TMP_InputField VerrifyPasswordInputField;
+    public TMPro.TMP_InputField VerifyPasswordInputField;
 
     public TMPro.TMP_InputField ProfileUIPasswordInputField;
 
     public TMPro.TMP_Text EditStat;
 
-    public Button EditPasswordConfirmButton;
+    public Button ConfirmButton;
+    public Button CancelButton;
     public GameObject EditPasswordUI;
     public GameObject EditProfileUI;
 
     void Start()
     {
-        EditPasswordConfirmButton.onClick.AddListener(() => {
-            func_EdirPassword(OldPasswordInputField.text, NewPasswordInputField.text, VerrifyPasswordInputField.text);
+        ConfirmButton.onClick.AddListener(() => {
+            func_EditPassword(OldPasswordInputField.text, NewPasswordInputField.text, VerifyPasswordInputField.text);
+        });
+        CancelButton.onClick.AddListener(() => {
+            EditPasswordUI.SetActive(false);
+            EditProfileUI.SetActive(true);
         });
     }
-    public void func_EdirPassword(string oldpass, string newpass, string verifypass)
+    
+    public void func_EditPassword(string oldpass, string newpass, string verifypass)
     {
-        if (OldPasswordInputField.text == "" || VerrifyPasswordInputField.text == "" || NewPasswordInputField.text == "") {
+        if (OldPasswordInputField.text == "" || NewPasswordInputField.text == "" || VerifyPasswordInputField.text == "") {
             EditStat.text = "Please fill all the blank";
         }
         else if (oldpass != Profile.Password) {
-            EditStat.text = "Your old password is wrong.";
+            EditStat.text = "The old password is wrong.";
         }
         else if (oldpass == newpass) {
             EditStat.text = "Can't use same password.";
@@ -39,7 +45,7 @@ public class EditPassword : MonoBehaviour
             EditStat.text = "Verify password wrong.";
         }
         else {
-            ProfileUIPasswordInputField.text = VerrifyPasswordInputField.text;
+            ProfileUIPasswordInputField.text = VerifyPasswordInputField.text;
             EditPasswordUI.SetActive(false);
             EditProfileUI.SetActive(true);
         }

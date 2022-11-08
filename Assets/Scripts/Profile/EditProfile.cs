@@ -13,16 +13,11 @@ public class EditProfile : MonoBehaviour
     public TMPro.TMP_InputField CreditCardInputField;
 
     public TMPro.TMP_Text EditStat;
-
+    
+    public Button EditPasswordButton;
     public Button ConfirmButton;
-    public Button ToEditPasswordButton;
     public GameObject EditPasswordUI;
     public GameObject EditProfileUI;
-
-    void MoveToScenes(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-    }
 
     void Start()
     {
@@ -35,7 +30,7 @@ public class EditProfile : MonoBehaviour
         ConfirmButton.onClick.AddListener(() => {
             StartCoroutine(func_EditProfile(LoginSystem.AccountName, UserNameInputField.text, PasswordInputField.text, CarNumberInputField.text, CreditCardInputField.text, PhoneNumberInputField.text));
         });
-        ToEditPasswordButton.onClick.AddListener(() => {
+        EditPasswordButton.onClick.AddListener(() => {
             EditPasswordUI.SetActive(true);
             EditProfileUI.SetActive(false);
         });
@@ -63,7 +58,7 @@ public class EditProfile : MonoBehaviour
                 }
                 else {
                     if (www.downloadHandler.text == "Profile edit successfully.") {
-                        MoveToScenes("Profile");
+                        SceneManager.LoadScene("Profile");
                     }
                     else {
                         Debug.Log(www.downloadHandler.text);
