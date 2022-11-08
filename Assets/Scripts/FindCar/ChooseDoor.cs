@@ -9,6 +9,7 @@ public class ChooseDoor : MonoBehaviour
     public static int DoorNumber;
     public TMPro.TMP_Dropdown myDrop;
     public Button ArrowShow;
+    
     public void ChooseDoorNumber()
     {
         if (myDrop.value == 2) {
@@ -20,11 +21,8 @@ public class ChooseDoor : MonoBehaviour
         else if (myDrop.value == 4) {
             DoorNumber = 99;
         }
-        else if (myDrop.value == 1) {
-            print("我好帥1");
-        }
         else {
-            print("我好帥0");
+            Debug.Log("There's some error happened.");
         }
     }
 }
