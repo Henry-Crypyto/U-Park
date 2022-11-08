@@ -49,7 +49,7 @@ public class LoginSystem : MonoBehaviour
                         SceneManager.LoadScene("FindSlot");
                     }
                     else {
-                        LoginStat.text = "Wrong account or password.\n" + www.downloadHandler.text;
+                        LoginStat.text = "Wrong account or password.\n";
                         LoginStat.color = Color.red;
                     }
                 }
