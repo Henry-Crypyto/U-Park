@@ -57,7 +57,7 @@ public class EditProfile : MonoBehaviour
                     Debug.Log(www.error);
                 }
                 else {
-                    if (www.downloadHandler.text == "Profile edit successfully.") {
+                    if (www.downloadHandler.text == "Profile edit successfully") {
                         SceneManager.LoadScene("Profile");
                     }
                     else {

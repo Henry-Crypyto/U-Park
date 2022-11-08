@@ -20,7 +20,7 @@ public class RegisterSystem : MonoBehaviour
             StartCoroutine(RegisterUser(UserNameInputField.text, PhoneNumberInputField.text, AccountInputField.text, PasswordInputField.text, VerifyPasswordInputField.text));
         });
     }
-    public IEnumerator RegisterUser(string username, string passwords, string verifypassword, string Account, string PhoneNum)
+    public IEnumerator RegisterUser(string username, string PhoneNum, string Account, string passwords, string verifypassword)
     {
         WWWForm form = new WWWForm();
         form.AddField("loginUser", username);

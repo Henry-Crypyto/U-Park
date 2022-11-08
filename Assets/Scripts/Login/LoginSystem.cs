@@ -44,7 +44,7 @@ public class LoginSystem : MonoBehaviour
                 else {
                     if (www.downloadHandler.text == "Login Succes") {
                         AccountName = Account;
-                        LoginStat.text = "Login Success." + www.downloadHandler.text;
+                        LoginStat.text = "Login Success.";
                         LoginStat.color = Color.green;
                         SceneManager.LoadScene("FindSlot");
                     }
