@@ -1427,8 +1427,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RegisterStat: {fileID: 1798139400}
   UserNameInputField: {fileID: 375459838}
-  AccountInputField: {fileID: 1909981853}
   PhoneNumberInputField: {fileID: 1831682238}
+  AccountInputField: {fileID: 1909981853}
   PasswordInputField: {fileID: 1097912044}
   VerifyPasswordInputField: {fileID: 727900305}
   SignUpButton: {fileID: 503810897}
