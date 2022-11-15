@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Login/Login.unity
     guid: f99c4347357a54d42b4d75281067d52f
   - enabled: 1
-    path: Assets/Scenes/Register/Register.unity
+    path: Assets/Scenes/Login/Register.unity
     guid: 9f576c0646bbff543b41fdb42ae9b726
   - enabled: 1
     path: Assets/Scenes/FindSlot/FindSlot.unity

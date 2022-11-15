@@ -11,16 +11,17 @@ public class LineSetup : MonoBehaviour
     public TMPro.TMP_Text RemindMessage;
     [SerializeField] private Transform[] points;
     [SerializeField] private LineController line;
-    
-    void Update() {
-        if(GetSlotNum.SlotNumber==0){
-                RemindMessage.text="EnterSlotNum first!!";
-            }
+
+    void Update()
+    {
+        if (GetSlotNum.SlotNumber == 0) {
+            RemindMessage.text = "EnterSlotNum first!!";
+        }
         ArrowShow.onClick.AddListener(() => {
-            if(GetSlotNum.SlotNumber==0){
-                RemindMessage.text="EnterSlotNum first!!";
+            if (GetSlotNum.SlotNumber == 0) {
+                RemindMessage.text = "EnterSlotNum first!!";
             }
-            else{line.SetUpLine(points);}
+            else { line.SetUpLine(points); }
             // Line.SetActive(true);
         });
     }
