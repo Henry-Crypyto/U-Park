@@ -31,7 +31,7 @@ public class Payment : MonoBehaviour
 
         WWWForm form = new WWWForm();
         form.AddField("SlotNum", SlotNum);
-        using (UnityWebRequest www = UnityWebRequest.Post("https://u-parkprojectgraduation.com/phpfile/Payment.php", form)) {
+        using (UnityWebRequest www = UnityWebRequest.Post("http://u-parkprojectgraduation.com/phpfile/Payment.php", form)) {
             yield return www.SendWebRequest();
 
             if (www.result != UnityWebRequest.Result.Success) {

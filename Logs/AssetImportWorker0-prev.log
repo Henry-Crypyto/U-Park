@@ -15,7 +15,7 @@ D:/Unity/Saves/U-Park
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53079
+53365
 Successfully changed project path to: D:/Unity/Saves/U-Park
 D:/Unity/Saves/U-Park
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ D:/Unity/Saves/U-Park
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 163.83 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 143.07 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.5f1 (40eb3a945986)
 [Subsystems] Discovering subsystems at path D:/Unity/Editor/2021.3.5f1/Editor/Data/Resources/UnitySubsystems
@@ -63,97 +63,97 @@ Initialize mono
 Mono path[0] = 'D:/Unity/Editor/2021.3.5f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/Editor/2021.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Unity/Editor/2021.3.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56084
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56636
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/Editor/2021.3.5f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: D:/Unity/Editor/2021.3.5f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: D:/Unity/Editor/2021.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.061770 seconds.
+Registered in 0.006475 seconds.
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 156.27 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 150.43 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.042 seconds
+- Completed reload, in  1.022 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2043ms)
-		BeginReloadAssembly (866ms)
+	ReloadAssembly (1023ms)
+		BeginReloadAssembly (97ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (962ms)
-			LoadAssemblies (878ms)
+		EndReloadAssembly (781ms)
+			LoadAssemblies (96ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (242ms)
+			SetupTypeCache (207ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (64ms)
-			SetupLoadedEditorAssemblies (541ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (438ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (128ms)
+				InitializePlatformSupportModulesInManaged (75ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (156ms)
+				RefreshPlugins (151ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (165ms)
-				ProcessInitializeOnLoadMethodAttributes (89ms)
+				ProcessInitializeOnLoadAttributes (140ms)
+				ProcessInitializeOnLoadMethodAttributes (70ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.009001 seconds.
+Registered in 0.007909 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Saves\U-Park\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Saves\U-Park\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 153.60 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 248.74 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  5.836 seconds
+- Completed reload, in  2.106 seconds
 Domain Reload Profiling:
-	ReloadAssembly (5837ms)
-		BeginReloadAssembly (186ms)
+	ReloadAssembly (2107ms)
+		BeginReloadAssembly (254ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
+			DisableScriptedObjects (11ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (32ms)
-		EndReloadAssembly (5303ms)
-			LoadAssemblies (2506ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (1577ms)
+			LoadAssemblies (321ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (459ms)
+			SetupTypeCache (375ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (104ms)
-			SetupLoadedEditorAssemblies (2141ms)
+			RebuildScriptCaches (89ms)
+			SetupLoadedEditorAssemblies (813ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (33ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (154ms)
-				BeforeProcessingInitializeOnLoad (142ms)
-				ProcessInitializeOnLoadAttributes (1669ms)
-				ProcessInitializeOnLoadMethodAttributes (138ms)
-				AfterProcessingInitializeOnLoad (6ms)
+				RefreshPlugins (249ms)
+				BeforeProcessingInitializeOnLoad (163ms)
+				ProcessInitializeOnLoadAttributes (310ms)
+				ProcessInitializeOnLoadMethodAttributes (54ms)
+				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (10ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
-Refreshing native plugins compatible for Editor in 1.81 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.16 seconds
+Refreshing native plugins compatible for Editor in 1.23 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4108 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 38 unused Assets / (55.3 KB). Loaded Objects now: 4578.
-Memory consumption went from 164.4 MB to 164.4 MB.
-Total: 7.159100 ms (FindLiveObjects: 0.703100 ms CreateObjectMapping: 0.588300 ms MarkObjects: 5.759300 ms  DeleteObjects: 0.106000 ms)
+Memory consumption went from 164.3 MB to 164.3 MB.
+Total: 5.071600 ms (FindLiveObjects: 0.389300 ms CreateObjectMapping: 0.385700 ms MarkObjects: 4.152300 ms  DeleteObjects: 0.141900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -167,7 +167,49 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 216243.893330 seconds.
-  path: Assets/Pictures/FindSlot/confirmWindow.png
-  artifactKey: Guid(ce75212bbbfa67343a1d03e9e68117e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pictures/FindSlot/confirmWindow.png using Guid(ce75212bbbfa67343a1d03e9e68117e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38eb6ab6d2369adc52313ab0ff9f9549') in 0.334472 seconds 
+  Time since last request: 31387.599107 seconds.
+  path: Assets/Growland Bold.otf
+  artifactKey: Guid(ce41027891777184cb543319876512ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Growland Bold.otf using Guid(ce41027891777184cb543319876512ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86c0865064d45f61e57708669b356d9f') in 0.395397 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.443263 seconds.
+  path: Assets/Cocogoose Pro-trial.ttf
+  artifactKey: Guid(e41a24f7ada988443ae6b4b30111e631) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cocogoose Pro-trial.ttf using Guid(e41a24f7ada988443ae6b4b30111e631) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99fa4d95d05e2addc900c1bb78dd6070') in 0.041346 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 410.335053 seconds.
+  path: Assets/TextMesh Pro/Fonts/Cocogoose Pro-trial SDF.asset
+  artifactKey: Guid(d2137f445e25d9841abb87b6611382ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/Cocogoose Pro-trial SDF.asset using Guid(d2137f445e25d9841abb87b6611382ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e369ffdd55d9c32860bda503d3378e1') in 0.091332 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 56.858374 seconds.
+  path: Assets/Cocogoose Pro Semilight-trial.ttf
+  artifactKey: Guid(647bddaaa2ac75f439873a4101e34878) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cocogoose Pro Semilight-trial.ttf using Guid(647bddaaa2ac75f439873a4101e34878) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9297446191a307be14b0bc8329b1fc72') in 0.041039 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.029303 seconds.
+  path: Assets/TextMesh Pro/Fonts/Cocogoose Pro-trial.ttf
+  artifactKey: Guid(d9e635568550859408385aec5160c1f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/Cocogoose Pro-trial.ttf using Guid(d9e635568550859408385aec5160c1f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '998d84fb10de02b6162c17a34a55ed64') in 0.017602 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.041320 seconds.
+  path: Assets/TextMesh Pro/Fonts/Cocogoose Pro Semilight-trial SDF.asset
+  artifactKey: Guid(e2141c6f46e6dc24991459db6accba84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/Cocogoose Pro Semilight-trial SDF.asset using Guid(e2141c6f46e6dc24991459db6accba84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06bd9e25b97385ab7f04ae95e4d76486') in 0.040198 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 460.632180 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/Cocogoose Pro Semilight-trial SDF.asset
+  artifactKey: Guid(e2141c6f46e6dc24991459db6accba84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/Cocogoose Pro Semilight-trial SDF.asset using Guid(e2141c6f46e6dc24991459db6accba84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e696beef7eee0bd2638ec473d764823c') in 0.040612 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 463.914918 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '994b32c951961057e515164e0375d5df') in 0.032889 seconds 

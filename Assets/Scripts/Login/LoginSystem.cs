@@ -35,9 +35,10 @@ public class LoginSystem : MonoBehaviour
 
         }
         else {
-            using (UnityWebRequest www = UnityWebRequest.Post("https://u-parkprojectgraduation.com/phpfile/Login.php", form)) {
+            using (UnityWebRequest www = UnityWebRequest.Post("http://u-parkprojectgraduation.com/phpfile/Login.php", form)) {
+                www.useHttpContinue=false;
                 yield return www.SendWebRequest();
-
+                
                 if (www.result != UnityWebRequest.Result.Success) {
                     Debug.Log(www.error);
                 }

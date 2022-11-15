@@ -50,7 +50,7 @@ public class EditProfile : MonoBehaviour
             form.AddField("loginCreditCardNum", CreditCardNumber);
             form.AddField("loginPhoneNum", PhoneNumber);
 
-            using (UnityWebRequest www = UnityWebRequest.Post("https://u-parkprojectgraduation.com/phpfile/EditProfile.php", form)) {
+            using (UnityWebRequest www = UnityWebRequest.Post("http://u-parkprojectgraduation.com/phpfile/EditProfile.php", form)) {
                 yield return www.SendWebRequest();
 
                 if (www.result != UnityWebRequest.Result.Success) {

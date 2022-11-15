@@ -43,7 +43,7 @@ public class RegisterSystem : MonoBehaviour
             RegisterStat.text = "Password verify failed.";
         }
         else {
-            using (UnityWebRequest www = UnityWebRequest.Post("https://u-parkprojectgraduation.com/phpfile/RegisterUser.php", form)) {
+            using (UnityWebRequest www = UnityWebRequest.Post("http://u-parkprojectgraduation.com/phpfile/RegisterUser.php", form)) {
                 yield return www.SendWebRequest();
 
                 if (www.result != UnityWebRequest.Result.Success) {

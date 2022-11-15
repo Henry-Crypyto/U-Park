@@ -39,7 +39,7 @@ public class Profile : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("loginUser", Account);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("https://u-parkprojectgraduation.com/phpfile/Profile.php", form)) {
+        using (UnityWebRequest www = UnityWebRequest.Post("http://u-parkprojectgraduation.com/phpfile/Profile.php", form)) {
             yield return www.SendWebRequest();
 
             if (www.result != UnityWebRequest.Result.Success) {

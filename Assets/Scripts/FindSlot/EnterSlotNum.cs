@@ -45,7 +45,7 @@ public class EnterSlotNum : MonoBehaviour
         string UpperSlotNumInput = SlotNumInput.ToUpper();
         WWWForm form = new WWWForm();
         form.AddField("SlotNum", UpperSlotNumInput);
-        using (UnityWebRequest www = UnityWebRequest.Post("https://u-parkprojectgraduation.com/phpfile/EnterSlotNum.php", form)) {
+        using (UnityWebRequest www = UnityWebRequest.Post("http://u-parkprojectgraduation.com/phpfile/EnterSlotNum.php", form)) {
             yield return www.SendWebRequest();
             if (www.result != UnityWebRequest.Result.Success) {
                 Debug.Log(www.error);
