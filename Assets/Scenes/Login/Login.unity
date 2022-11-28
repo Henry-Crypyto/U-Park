@@ -2256,6 +2256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PasswordInputField: {fileID: 1097912044}
+  ShowPasswordButton: {fileID: 1489848567}
 --- !u!1 &1521032886
 GameObject:
   m_ObjectHideFlags: 0

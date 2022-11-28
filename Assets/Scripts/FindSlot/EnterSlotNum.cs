@@ -12,11 +12,13 @@ public class EnterSlotNum : MonoBehaviour
     public TMPro.TMP_Text ConfirmMessage;
     public TMPro.TMP_InputField SlotNumInputField;
     public GameObject ConfirmWindow;
-    public static string SlotNum = "";
+    public static string SlotNum;
     public TMPro.TMP_Text RegisterStat;
+   
 
     void Start()
     {
+        CheckQRcode();
         EnterButton.onClick.AddListener(() => {
             if (SlotNumInputField.text == "") {
                 RegisterStat.text = "Please enter slot number first!!!";
@@ -31,8 +33,6 @@ public class EnterSlotNum : MonoBehaviour
             ConfirmWindow.SetActive(false);
             StartCoroutine(func_EnterSlotNum(SlotNumInputField.text));
         });
-
-
 
         CancelButton.onClick.AddListener(() => {
             ConfirmWindow.SetActive(false);
@@ -56,6 +56,15 @@ public class EnterSlotNum : MonoBehaviour
                 }
                 RegisterStat.text = www.downloadHandler.text;
             }
+        }
+    }
+
+    public void CheckQRcode(){
+       if(QRcode.QRcodeControlBit==1&&QRcode.QRcodeSlotNum!=null){
+            ConfirmWindow.SetActive(true);
+            ConfirmMessage.text = "Your slot number is " + QRcode.QRcodeSlotNum + "\nIs it correct?";
+            SlotNumInputField.text=QRcode.QRcodeSlotNum;
+            QRcode.QRcodeControlBit=0;
         }
     }
 }

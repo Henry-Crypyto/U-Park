@@ -9,7 +9,15 @@ using UnityEngine.SceneManagement;
 public class ShowPassword : MonoBehaviour
 {
     public TMPro.TMP_InputField PasswordInputField;
-
+    public Button ShowPasswordButton;
+    
+    
+    
+    void Start(){
+        ShowPasswordButton.onClick.AddListener(() => {
+            ToggleContentType();
+        });
+    }
     public void ToggleContentType()
     {
         if (this.PasswordInputField.contentType == TMPro.TMP_InputField.ContentType.Password) {
