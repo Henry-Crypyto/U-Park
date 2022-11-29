@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Profile/Profile.unity
     guid: bfff4a961aab6a14a9c867dabbe2663b
+  - enabled: 1
+    path: Assets/Scenes/FindSlot/QRcode/QRcode.unity
+    guid: 872a611d6a4677842bcbf16d1d3df677
   m_configObjects: {}
