@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FindSlot/QRcode/QRcode.unity
     guid: 872a611d6a4677842bcbf16d1d3df677
+  - enabled: 1
+    path: Assets/Scenes/FindSlot/ChooseMall.unity
+    guid: c534a3aeb3120064dad2f49d36d88b6e
+  - enabled: 1
+    path: Assets/Scenes/Payment/EndPage.unity
+    guid: f1f8194a305a32946a6d34268cc239e0
   m_configObjects: {}

@@ -1,4 +1,4 @@
- using UnityEngine;
+using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
 using UnityEngine.UI;
@@ -13,7 +13,14 @@ public class Payment : MonoBehaviour
     public TMPro.TMP_Text FeeTitle;
     public TMPro.TMP_Text ParkingStartTimeTitles;
     public TMPro.TMP_Text RemindMessage;
+
+    public GameObject ConfirmWindow;
+    public TMPro.TMP_Text ConfirmMessage;
+    public Button PayButton;
+    public Button ConfirmButton;
+    public Button CancelButton;
     int Valuation = 40;
+    string FinalPrice;
 
     void Start()
     {
@@ -21,14 +28,26 @@ public class Payment : MonoBehaviour
             RemindMessage.text = "Please enter slot number first.";
         }
         else {
-            StartCoroutine(func_Payment(EnterSlotNum.SlotNum));
+            StartCoroutine(ShowPaymentStat(EnterSlotNum.SlotNum));
         }
-        //StartCoroutine(func_Payment("A01"));
+        
+         PayButton.onClick.AddListener(() => {
+            ConfirmWindow.SetActive(true);
+            ConfirmMessage.text = "$ "+FinalPrice+" dollars";
+        });
+    
+        ConfirmButton.onClick.AddListener(() => {
+            ConfirmWindow.SetActive(false);
+            SceneManager.LoadScene("EndPage");
+        });
+        CancelButton.onClick.AddListener(() => {
+            ConfirmWindow.SetActive(false);
+        });
+        //StartCoroutine(ShowPaymentStat("A01"));
     }
 
-    public IEnumerator func_Payment(string SlotNum)
+    public IEnumerator ShowPaymentStat(string SlotNum)
     {
-
         WWWForm form = new WWWForm();
         form.AddField("SlotNum", SlotNum);
         using (UnityWebRequest www = UnityWebRequest.Post("http://u-parkprojectgraduation.com/phpfile/Payment.php", form)) {
@@ -54,7 +73,7 @@ public class Payment : MonoBehaviour
 
                 int FeeHours = (int)ts.TotalHours;
                 int FeeTemp = FeeHours * Valuation;
-                string FinalPrice = FeeTemp.ToString();
+                FinalPrice = FeeTemp.ToString();
 
 
                 TotalParkingTimeTitles.text = totalHours;
@@ -62,7 +81,6 @@ public class Payment : MonoBehaviour
                 SlotNumberTitle.text = "1st Floor - " + EnterSlotNum.SlotNum;
                 ParkingStartTimeTitles.text = "From " + str_start;
                 FeeTitle.text = "$ " + FinalPrice;
-
             }
         }
     }
