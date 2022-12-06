@@ -1280,7 +1280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1764706, g: 0.48627454, b: 0.9294118, a: 1}
+  m_Color: {r: 0.9811321, g: 0.36627164, b: 0.36627164, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3060,6 +3060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PasswordInputField: {fileID: 1097912044}
+  ShowPasswordButton: {fileID: 0}
 --- !u!114 &1489848567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3708,15 +3709,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sign Up
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2137f445e25d9841abb87b6611382ad, type: 2}
+  m_sharedMaterial: {fileID: 8508737100563723019, guid: d2137f445e25d9841abb87b6611382ad, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293753902
-  m_fontColor: {r: 0.18039216, g: 0.4862745, b: 0.92941177, a: 1}
+    rgba: 4294930254
+  m_fontColor: {r: 0.30727762, g: 0.43486226, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
