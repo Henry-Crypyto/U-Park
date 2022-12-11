@@ -15,16 +15,19 @@ public class Payment : MonoBehaviour
     public TMPro.TMP_Text RemindMessage;
 
     public GameObject ConfirmWindow;
+    public GameObject CompleteWindow;
     public TMPro.TMP_Text ConfirmMessage;
+    public TMPro.TMP_Text CompleteMessage;
     public Button PayButton;
     public Button ConfirmButton;
     public Button CancelButton;
+    public Button OKButton;
     int Valuation = 40;
     string FinalPrice;
 
     void Start()
     {
-        if (EnterSlotNum.SlotNum == "") {
+        if (EnterSlotNum.SlotNum == null) {
             RemindMessage.text = "Please enter slot number first.";
         }
         else {
@@ -38,10 +41,16 @@ public class Payment : MonoBehaviour
     
         ConfirmButton.onClick.AddListener(() => {
             ConfirmWindow.SetActive(false);
-            SceneManager.LoadScene("EndPage");
+            CompleteWindow.SetActive(true);
+            CompleteMessage.text="Payment Complete!!\n\nHave a nice day";
         });
+
         CancelButton.onClick.AddListener(() => {
             ConfirmWindow.SetActive(false);
+        });
+
+        OKButton.onClick.AddListener(() => {
+             CompleteWindow.SetActive(false);
         });
         //StartCoroutine(ShowPaymentStat("A01"));
     }
