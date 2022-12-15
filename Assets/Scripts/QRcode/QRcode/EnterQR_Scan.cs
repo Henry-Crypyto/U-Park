@@ -5,7 +5,10 @@ using ZXing;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-public class QRcode : MonoBehaviour
+using UnityEngine.Networking;
+using System;
+using TMPro;
+public class EnterQR_Scan : MonoBehaviour
 {
     [SerializeField]
     private RawImage rawImageBackGround;
@@ -71,23 +74,46 @@ public class QRcode : MonoBehaviour
     }
 
     private void Scan(){
+        string UParkSerialText="U-Park";
         try{
              IBarcodeReader barcodeReader =new BarcodeReader();
              Result result=barcodeReader.Decode(cameratexture.GetPixels32(),cameratexture.width,cameratexture.height);
-             if(result!=null){
+             string[] QRtext = result.Text.Split('/');
+             string QRSerialText= QRtext[0];
+             string Accountname= QRtext[1];
+             if(result!=null&&UParkSerialText==QRSerialText){
                 textOut.text=result.Text;
-                QRcodeSlotNum=result.Text;
-                QRcodeControlBit=1;
+                String TimeNow = DateTime.Now.ToString();
+                PostEntryTime(Accountname,TimeNow);
                 ClickEvent("FindSLot");
              }
              else{
-                QRcodeControlBit=0;
                 textOut.text="Failed to read QRcode";
              }
         }
         catch{
-            QRcodeControlBit=0;
             textOut.text="Failed in try";
+        }
+    }
+
+    public IEnumerator PostEntryTime(string Account,DateTime Entrytime)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("loginAccount", Account);
+        form.AddField("Entrytime", Entrytime);
+
+
+        using (UnityWebRequest www = UnityWebRequest.Post("http://u-parkprojectgraduation.com/phpfile/EntryTime.php", form)) {
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success) {
+                Debug.Log(www.error);
+            }
+            else {
+                
+                string s = www.downloadHandler.text;
+                Debug.Log(s);
+            }
         }
     }
 }
