@@ -8,34 +8,40 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/StartPage/StartPage.unity
     guid: 5f2adc966e5e62045b6e9966a0c8bb3b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Login/Login.unity
     guid: f99c4347357a54d42b4d75281067d52f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Login/Register.unity
     guid: 9f576c0646bbff543b41fdb42ae9b726
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FindSlot/FindSlot.unity
     guid: b3ac49ace47a6114ba50b10ebfa6f494
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FindCar/FindCar.unity
     guid: 6dcbfe74287747c4aa7c90742d03ab2a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Payment/Payment.unity
     guid: 6295feb61890e6848abcb8dcd20c928f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Profile/EditProfile.unity
     guid: 7ec5630a2bc9d3841b4150126996eaeb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Profile/Profile.unity
     guid: bfff4a961aab6a14a9c867dabbe2663b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FindSlot/QRcode/QRcode.unity
     guid: 872a611d6a4677842bcbf16d1d3df677
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FindSlot/ChooseMall.unity
     guid: c534a3aeb3120064dad2f49d36d88b6e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Payment/EndPage.unity
     guid: f1f8194a305a32946a6d34268cc239e0
+  - enabled: 0
+    path: Assets/Scenes/QRcode/EnterQR_Generate.unity
+    guid: 62d8c8d9ab1190b4fb28e6dd122cebcc
+  - enabled: 1
+    path: Assets/Scenes/QRcode/EnterQR_Scan.unity
+    guid: c36dbda14f2140649914f20a58c497b4
   m_configObjects: {}

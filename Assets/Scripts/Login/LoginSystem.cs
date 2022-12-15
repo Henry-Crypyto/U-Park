@@ -47,7 +47,7 @@ public class LoginSystem : MonoBehaviour
                         AccountName = Account;
                         LoginStat.text = "Login Success.";
                         LoginStat.color = Color.green;
-                        SceneManager.LoadScene("ChooseMall");
+                        SceneManager.LoadScene("EnterQR_Generate");
                     }
                     else {
                         LoginStat.text = "Wrong account or password.\n";
