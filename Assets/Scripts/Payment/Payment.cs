@@ -27,22 +27,22 @@ public class Payment : MonoBehaviour
 
     void Start()
     {
-        if (EnterSlotNum.SlotNum == null) {
+        if (EnterSlotNum.SlotNum == "") {
             RemindMessage.text = "Please enter slot number first.";
         }
         else {
             StartCoroutine(ShowPaymentStat(EnterSlotNum.SlotNum));
-        }
-        
-         PayButton.onClick.AddListener(() => {
+             PayButton.onClick.AddListener(() => {
             ConfirmWindow.SetActive(true);
             ConfirmMessage.text = "$ "+FinalPrice+" dollars";
         });
     
         ConfirmButton.onClick.AddListener(() => {
+            StartCoroutine(RenewRegisterStat(EnterSlotNum.SlotNum));
             ConfirmWindow.SetActive(false);
             CompleteWindow.SetActive(true);
             CompleteMessage.text="Payment Complete!!\n\nHave a nice day";
+            EnterSlotNum.SlotNum="";
         });
 
         CancelButton.onClick.AddListener(() => {
@@ -51,7 +51,9 @@ public class Payment : MonoBehaviour
 
         OKButton.onClick.AddListener(() => {
              CompleteWindow.SetActive(false);
+             SceneManager.LoadScene("ExitQR_Generate");
         });
+        }
         //StartCoroutine(ShowPaymentStat("A01"));
     }
 
@@ -93,11 +95,19 @@ public class Payment : MonoBehaviour
             }
         }
     }
-}
+    public IEnumerator RenewRegisterStat(string SlotNum)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("SlotNum", SlotNum);
+        using (UnityWebRequest www = UnityWebRequest.Post("http://u-parkprojectgraduation.com/phpfile/RenewRegisterStat.php", form)) {
+            yield return www.SendWebRequest();
 
-            //不要刪除下面這些
-            //   
-            //   TotalParkingTimeTitles.text=totalHours;
-            //   CarNumberTitle.text=LoginSystem.CarNum;
-            //   SlotNumberTitle.text="Slot number:"+EnterSlotNum.SlotNum;
-            //   FeeTitle.text="Fee:  "+FinalPrice+" dollars";
+            if (www.result != UnityWebRequest.Result.Success) {
+                Debug.Log(www.error);
+            }
+            else {
+                Debug.Log("OK");
+            }
+        }
+    }
+}

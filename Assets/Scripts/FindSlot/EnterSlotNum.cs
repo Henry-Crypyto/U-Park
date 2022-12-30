@@ -9,17 +9,27 @@ public class EnterSlotNum : MonoBehaviour
     public Button EnterButton;
     public Button ConfirmButton;
     public Button CancelButton;
+    public Button NoticeConfirmButton;
     public TMPro.TMP_Text ConfirmMessage;
+    public TMPro.TMP_Text NoticeMessage;
     public TMPro.TMP_InputField SlotNumInputField;
     public GameObject ConfirmWindow;
-    public static string SlotNum;
+    public GameObject NoticeWindow;
+    public static string SlotNum="";
     public TMPro.TMP_Text RegisterStat;
    
 
     void Start()
     {
         CheckQRcode();
-        EnterButton.onClick.AddListener(() => {
+        if(SlotNum!=""){
+                NoticeWindow.SetActive(true);
+                NoticeMessage.text = "Your registered slot number is"+" "+SlotNum;
+                NoticeConfirmButton.onClick.AddListener(() => {
+                    NoticeWindow.SetActive(false);
+                 });
+        }else{
+            EnterButton.onClick.AddListener(() => {
             if (SlotNumInputField.text == "") {
                 RegisterStat.text = "Please enter slot number first!!!";
             }
@@ -37,6 +47,8 @@ public class EnterSlotNum : MonoBehaviour
         CancelButton.onClick.AddListener(() => {
             ConfirmWindow.SetActive(false);
         });
+        }
+        
     }
 
     public IEnumerator func_EnterSlotNum(string SlotNumInput)

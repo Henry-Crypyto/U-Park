@@ -12,7 +12,7 @@ public class FindEmptySlot : MonoBehaviour
     public void Start()
     {
         time = 0f;
-        timeDelay = 3f;
+        timeDelay = 1f;
         sprite = GetComponent<SpriteRenderer>();
 
 
