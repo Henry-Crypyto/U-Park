@@ -50,7 +50,7 @@ public class Payment : MonoBehaviour
         });
 
         OKButton.onClick.AddListener(() => {
-             CompleteWindow.SetActive(false);
+            //  CompleteWindow.SetActive(false);
              SceneManager.LoadScene("ExitQR_Generate");
         });
         }

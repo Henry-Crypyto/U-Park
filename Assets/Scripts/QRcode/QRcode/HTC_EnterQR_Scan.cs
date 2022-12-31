@@ -102,7 +102,7 @@ public class HTC_EnterQR_Scan : MonoBehaviour
                 string[] test = Timelater.Split(' ');
                 string Final=test[0]+" "+test[2];
                 textOut.text="Exit Time:"+Final;
-                PostExitSignal(Accountname);
+                StartCoroutine(PostExitSignal(Accountname));
                 }
              }
              else{
@@ -133,7 +133,7 @@ public class HTC_EnterQR_Scan : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("Account", Account);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://u-parkprojectgraduation.com/phpfile/Exit.php", form)) {
+        using (UnityWebRequest www = UnityWebRequest.Post("http://u-parkprojectgraduation.com/phpfile/ExitTime.php", form)) {
             yield return www.SendWebRequest();
 
             if (www.result != UnityWebRequest.Result.Success) {

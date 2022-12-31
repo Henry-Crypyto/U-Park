@@ -44,7 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/QRcode/ExitQR_Generate.unity
     guid: 76858f1581bebd044855c67764bbb937
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/QRcode/EnterQR_Scan.unity
     guid: d491145e535ccf746ac3d5992b5dc253
   m_configObjects: {}

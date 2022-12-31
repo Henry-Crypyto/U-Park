@@ -26,7 +26,7 @@ public class EnterQR_Generate : MonoBehaviour
         storeEncodeTexture=new Texture2D(256,256);
         EncodeTextToQRcode();
         OKButton.onClick.AddListener(() => {
-            SceneManager.LoadScene("FindSlot");
+        SceneManager.LoadScene("FindSlot");
         });
     }
     void Update(){
@@ -70,7 +70,7 @@ public class EnterQR_Generate : MonoBehaviour
                 Debug.Log(www.error);
             }
             else {
-                if(www.downloadHandler.text!="Account does not exists."){
+                if(www.downloadHandler.text!="You havn't enter plarkinglot!!!"&&www.downloadHandler.text!="Account does not exists."){
                       ConfirmWindow.SetActive(true);
                       textOut.text=www.downloadHandler.text;
                 }
