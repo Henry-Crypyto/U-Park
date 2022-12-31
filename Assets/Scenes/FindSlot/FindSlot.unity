@@ -5170,7 +5170,7 @@ GameObject:
   - component: {fileID: 552665254}
   - component: {fileID: 552665253}
   m_Layer: 5
-  m_Name: Button
+  m_Name: QRcodeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5607,8 +5607,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Confirm '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2137f445e25d9841abb87b6611382ad, type: 2}
+  m_sharedMaterial: {fileID: 8508737100563723019, guid: d2137f445e25d9841abb87b6611382ad, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6061,7 +6061,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -9693,8 +9693,8 @@ MonoBehaviour:
 
     your slot number is %s?'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e2141c6f46e6dc24991459db6accba84, type: 2}
+  m_sharedMaterial: {fileID: 9177353772888904460, guid: e2141c6f46e6dc24991459db6accba84, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10879,8 +10879,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c7b7f76f317739f43bdddc1381ade3ad, type: 2}
-  m_sharedMaterial: {fileID: -3517535491357865282, guid: c7b7f76f317739f43bdddc1381ade3ad, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e2141c6f46e6dc24991459db6accba84, type: 2}
+  m_sharedMaterial: {fileID: 9177353772888904460, guid: e2141c6f46e6dc24991459db6accba84, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11096,7 +11096,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: OK
+  m_text: Close
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12233,8 +12233,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c7b7f76f317739f43bdddc1381ade3ad, type: 2}
-  m_sharedMaterial: {fileID: -3517535491357865282, guid: c7b7f76f317739f43bdddc1381ade3ad, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e2141c6f46e6dc24991459db6accba84, type: 2}
+  m_sharedMaterial: {fileID: 9177353772888904460, guid: e2141c6f46e6dc24991459db6accba84, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17934,8 +17934,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4281874488
+  m_fontColor: {r: 0.21960784, g: 0.21960784, b: 0.21960784, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -17958,7 +17958,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
