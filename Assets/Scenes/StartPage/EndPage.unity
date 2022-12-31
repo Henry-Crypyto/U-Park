@@ -925,7 +925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c87a35e13ad7fa4eab759e532ed76d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: FindSlot
+  sceneName: Login
 --- !u!114 &1857465143
 MonoBehaviour:
   m_ObjectHideFlags: 0
