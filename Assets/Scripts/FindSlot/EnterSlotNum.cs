@@ -12,6 +12,7 @@ public class EnterSlotNum : MonoBehaviour
     public Button OKButton;
     public Button NoticeConfirmButton;
     public Button ScanButton;
+    public Button EntryQRcodeButton;
     public TMPro.TMP_Text ConfirmMessage;
     public TMPro.TMP_Text NoticeMessage;
     public TMPro.TMP_InputField SlotNumInputField;
@@ -23,7 +24,9 @@ public class EnterSlotNum : MonoBehaviour
 
     void Start()
     {
-        
+        EntryQRcodeButton.onClick.AddListener(() => {
+                    SceneManager.LoadScene("EnterQR_Generate");
+            });
         CheckQRcode();
         if(SlotNum!=""){
                 ScanButton.enabled = false;
