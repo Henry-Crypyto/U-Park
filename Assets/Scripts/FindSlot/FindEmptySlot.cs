@@ -51,8 +51,18 @@ public class FindEmptySlot : MonoBehaviour
                             }
                         }
                     }
+                    else{
+                    GameObject[] objects = GameObject.FindGameObjectsWithTag("SlotSprite");
+                    foreach (GameObject go in objects) {
+                        if (go.name == SlotNum[i]) {
+                            SpriteRenderer[] renderers = go.GetComponents<SpriteRenderer>();
+                            renderers[0].color = Color.red;
+                            }
+                        }
+                    }
+
+                    }
                 }
             }
         }   
-    }
 }
